@@ -22,8 +22,10 @@ class SubscriptionSynchronizationService
 
             if ($platform->id == PlatformsEnum::Android->value) {
                 $this->androidSubscriptionStatusChecker->checkStatus($app);
+                dd($platform->id);
             } elseif ($platform->id == PlatformsEnum::IOS->value) {
                 $this->iOSSubscriptionStatusChecker->checkStatus($app);
+                dd($platform->id);
             }
         }   
     }
